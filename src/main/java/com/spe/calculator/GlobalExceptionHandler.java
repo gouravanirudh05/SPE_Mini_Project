@@ -21,4 +21,10 @@ public class GlobalExceptionHandler {
     public ErrorResponse handleTypeMismatch(MethodArgumentTypeMismatchException ex) {
         return ErrorResponse.badRequest("Parameter '" + ex.getName() + "' must be a number, got '" + ex.getValue() + "'");
     }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ErrorResponse handleIllegalArgument(IllegalArgumentException ex) {
+        return ErrorResponse.badRequest(ex.getMessage());
+    }
 }
