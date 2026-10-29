@@ -2,8 +2,6 @@
 
 A production-style Calculator REST API built with Spring Boot, wrapped in a complete CI/CD pipeline using Jenkins, Docker and Docker Compose. A push to GitHub builds, tests, containerizes and deploys the app with no manual steps.
 
-**SPE Mini-Project** | CSE 816 Software Production Engineering | M.Tech (CSE) | Term I, 2026-27
-
 ## Architecture
 
 ```
@@ -22,17 +20,9 @@ Developer ──git push──▶ GitHub ──webhook──▶ Jenkins Pipeline
                                     └──────────────────────────┘
 ```
 
-## Prerequisites
 
-| Tool           | Version |
-|----------------|---------|
-| Java           | 21      |
-| Maven          | 3.9+    |
-| Docker         | 24+     |
-| Docker Compose | v2      |
-| Jenkins        | 2.4xx+ (only for the pipeline) |
 
-## Local Development
+## Steps to Run: 
 
 ### 1. Build
 
