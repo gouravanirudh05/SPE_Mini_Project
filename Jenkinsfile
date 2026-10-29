@@ -22,8 +22,6 @@ pipeline {
     triggers {
         // Fires on GitHub webhook (requires "GitHub hook trigger" in the job config)
         githubPush()
-        // Fallback in case the webhook is unreachable
-        pollSCM('H/5 * * * *')
     }
 
     options {
