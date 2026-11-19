@@ -49,6 +49,14 @@ class CalculatorControllerIntegrationTest {
     }
 
     @Test
+    void powerReturnsResult() throws Exception {
+        mockMvc.perform(get("/api/v1/power").param("a", "2").param("b", "10"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.operation").value("power"))
+                .andExpect(jsonPath("$.result").value(1024.0));
+    }
+
+    @Test
     void divideByZeroReturns400() throws Exception {
         mockMvc.perform(get("/api/v1/divide").param("a", "1").param("b", "0"))
                 .andExpect(status().isBadRequest())
