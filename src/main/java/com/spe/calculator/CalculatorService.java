@@ -23,4 +23,8 @@ public class CalculatorService {
         }
         return a / b;
     }
+
+    public double power(double a, double b) {
+        return Math.pow(a, b);
+    }
 }

@@ -113,6 +113,7 @@ All operations take numeric query parameters `a` and `b` and return JSON. Exampl
 | Subtract  | `GET /api/v1/subtract?a=&b=` |
 | Multiply  | `GET /api/v1/multiply?a=&b=` |
 | Divide    | `GET /api/v1/divide?a=&b=`   |
+| Power     | `GET /api/v1/power?a=&b=`    |
 | Health    | `GET /actuator/health`       |
 
 ### Add
@@ -141,6 +142,13 @@ curl "http://localhost:8081/api/v1/multiply?a=4&b=5"
 ```bash
 curl "http://localhost:8081/api/v1/divide?a=10&b=4"
 # {"operation":"divide","a":10.0,"b":4.0,"result":2.5}
+```
+
+### Power
+
+```bash
+curl "http://localhost:8081/api/v1/power?a=2&b=10"
+# {"operation":"power","a":2.0,"b":10.0,"result":1024.0}
 ```
 
 ### Errors → HTTP 400
