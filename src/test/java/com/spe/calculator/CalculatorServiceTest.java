@@ -38,4 +38,10 @@ class CalculatorServiceTest {
         IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> service.divide(1, 0));
         assertEquals("Division by zero is not allowed", ex.getMessage());
     }
+
+    @Test
+    void power() {
+        assertEquals(1024, service.power(2, 10));
+        assertEquals(0.5, service.power(2, -1));
+    }
 }
